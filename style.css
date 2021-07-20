@@ -532,7 +532,6 @@ button {
 
 a[data-lightbox] {
     position: relative;
-    display: block;
     text-align: center;
 }
 
@@ -700,8 +699,8 @@ p {
 }
 
 .social {
-    max-width: 400px;
     margin: auto auto auto auto;
+    width: 400px;
 }
 
 h2 {
@@ -743,10 +742,10 @@ h4 {
     margin-bottom: 24px;
 }
 
-.portfolio-row {
+/* .portfolio-row {
     margin-bottom: 44px;
     margin-top: 50px;
-}
+} */
 
 .avatar {
     box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.3);
@@ -810,19 +809,19 @@ h4 {
 }
 
 .bg-dots-bg {
-    background-image: url("img/dots-bg.png");
+    background-image: url("img/images-compressees/dots_bg.jpg");
 }
 
 .bg-lines-h2-bg {
-    background-image: url("img/lines-h2-bg.png");
+    background-image: url("img/images-compressees/lines_h2_bg.jpg");
 }
 
 .bg-banniere {
-    background-image: url("img/la-chouette-agence-banniere.jpg");
+    background-image: url("img/images-compressees/la-chouette-agence-banniere.jpg");
 }
 
 .bg-presentation {
-    background-image: url("img/image-de-presentation.bmp");
+    background-image: url("img/images-compressees/image-de-presentation.jpg");
 }
 
 @media (max-width: 1024px) {
@@ -848,13 +847,13 @@ h4 {
     }
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     .b-parallax {
         background-attachment: scroll;
     }
 }
 
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+@media only screen and (min-width: 1024px) and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
     .b-parallax {
         background-attachment: scroll;
     }
@@ -872,10 +871,7 @@ h4 {
         overflow-x: hidden;
         position: relative;
     }
-    .bloc {
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
-    }
+   
     .bloc-group,
     .bloc-group .bloc {
         display: block;
@@ -884,8 +880,6 @@ h4 {
     .bloc-fill-screen .fill-bloc-top-edge,
     .bloc-fill-screen .fill-bloc-bottom-edge {
         padding: 0 20px;
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
     }
 }
 
@@ -1033,10 +1027,84 @@ h4 {
         padding-left: 0;
         padding-right: 0;
     }
+
 }
 
 @media (max-width: 767px) {
     .bloc-mob-center-text {
         text-align: center;
     }
+    .box-partenaires{
+        margin: 0 30px;
+    }
+    .partenaires{
+        flex-direction: column;
+    }
+    .social{
+        width: auto;
+        display: flex;
+        padding: 0 20px;
+        justify-content: center;
+    }
+}
+
+.la_chouette_agence{
+    height: 40px;
+}
+
+.logo-chouette{
+    height: 100px;
+}
+
+.citation{
+    max-width: 560px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+}
+
+.citation p{
+    font-size: 20px;
+    text-align: center;
+    font-style: italic;
+
+}
+.cite p{
+    font-size: 14px;
+    text-align: center;
+}
+
+.citation figcaption{
+    text-align: center;
+}
+
+.titre-portfolio{
+    margin-bottom: 50px;
+}
+
+.box-partenaires{
+    padding-top: 80px;
+    width: 100%;
+    max-width: 90%;
+}
+
+.partenaires{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.box-client{
+    margin-bottom: 50px;
+}
+
+.box-photo{
+    display: flex;
+    justify-content: center;
+}
+
+.img-responsive{
+    width: 320px;
 }
